@@ -1,6 +1,6 @@
 require("dotenv").config();
 const express = require("express");
-const connectDB = require("./config/db");
+const connectDB = require("./config/db.js");
 
 const app = express();
 
@@ -9,7 +9,6 @@ connectDB();
 
 // Middleware
 app.use(express.json());
-
 
 console.log("Root route registered");
 app.get("/", (req, res) => {
